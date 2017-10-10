@@ -1,0 +1,7 @@
+Django
+djangorestframework
+coreapi>=1.32.0
+Markdown>=2.1.0
+django-filter>=1.0.1
+django-crispy-forms
+django-guardian>=1.1.1
