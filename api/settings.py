@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'HOST': '0.0.0.0',
+        'HOST': os.environ.get('STIMU_DB'),
         'PORT': 5432,
         'PASSWORD': 'password',
     }
