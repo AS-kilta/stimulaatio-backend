@@ -1,9 +1,9 @@
 from django.core.mail import EmailMessage
-import asyncio
 
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 from registration.models import Registration
 from registration.serializers import RegistrationSerializer
@@ -11,11 +11,15 @@ from registration.serializers import RegistrationSerializer2
 
 class RegistrationList(APIView):
     def get(self, request, format=None):
+        permission_classes = (IsAuthenticated,)
+
         registrations = Registration.objects.all()
         serializer = RegistrationSerializer2(registrations, many=True)
         return Response(serializer.data)
 
     def post(self, request, format=None):
+        permission_classes = (IsAuthenticated,)
+
         serializer = RegistrationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -59,6 +63,8 @@ stimulantti@as.fi
 
 class RegistrationListAll(APIView):
     def get(self, request, format=None):
+        permission_classes = (IsAuthenticated,)
+
         registrations = Registration.objects.all()
         serializer = RegistrationSerializer(registrations, many=True)
         return Response(serializer.data)
@@ -66,17 +72,23 @@ class RegistrationListAll(APIView):
 
 class RegistrationDetail(APIView):
     def get_object(selk, pk):
+        permission_classes = (IsAuthenticated,)
+
         try:
             registration = Registration.objects.get(pk=pk)
         except Registration.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
     def get(self, request, pk, format=None):
+        permission_classes = (IsAuthenticated,)
+
         registration = self.get_object(pk)
         serializer = RegistrationSerializer(registration)
         return Response(serializer.data)
 
     def put(self, request, pk, format=None):
+        permission_classes = (IsAuthenticated,)
+
         registration = self.get_object(pk)
         serializer = RegistrationSerializer(registration, data=request.data)
         if serializer.is_valid():
@@ -86,6 +98,8 @@ class RegistrationDetail(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, ok, format=None):
+        permission_classes = (IsAuthenticated,)
+
         registration = self.get_object(pk)
         registration.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
