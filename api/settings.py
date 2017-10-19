@@ -93,7 +93,7 @@ DATABASES = {
         'USER': 'postgres',
         'HOST': os.environ.get('STIMU_DB'),
         'PORT': 5432,
-        'PASSWORD': os.environ.get('DB_PASS'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
     }
 }
 
