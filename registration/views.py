@@ -132,7 +132,7 @@ class RegistrationDetail(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, ok, format=None):
+    def delete(self, request, pk, format=None):
         registration = self.get_object(pk)
         registration.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
