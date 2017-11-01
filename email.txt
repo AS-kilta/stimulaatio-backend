@@ -1,0 +1,36 @@
+Tämä on vahvistus ilmoittautumisestasi Automaatio- ja systeemitekniikan killan vuosijuhlaan Stimulaatioon. Tarkista, että täytetyt tiedot ovat oikein. Jos huomaat virheitä tai jotain muutoksia ilmenee, ilmoitathan näistä Stimulantille.
+
+Nimi: ${name}
+Sähköposti: ${email}
+Lipputyyppi: ${ticket_type}
+Sillis: ${sillis}
+Pöytäseura: ${table_company}
+Avec: ${avec}
+Erikoisruokavalio: ${special_diet}
+Menu: ${menu_type}
+Kutsuvieras: ${is_invited}
+Tervehdys: ${greeting}
+${greeting_group}Phuksivuosi: ${freshman_year}
+
+Tässä vielä muutama käytännön ohje juhlaan liittyen:
+
+Juhlat pidetään 1. joulukuuta ja ne alkavat kello 16:00 cocktailtilaisuudella TUAS-talolla osoitteessa Maarintie 8, 02150 Espoo. Mikäli olet ilmoittaunut antamaan tervehdyksen muista olla paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Kauniaisten VPK-talolle (Asematie 20, 02700 Kauniainen), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa wanhat tanssit sekä vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
+
+Silliaamiainen Stillis käynnistää seuraavan päivän Otaniemen Rantasaunalla (Vastaranta 1, 02150 Espoo) ja paikalle voi saapua kello 12:00 alkaen.
+
+Juhlan maksutiedot ovat seuraavat:
+
+Saaja: Automaatio- ja systeemitekniikan kilta ry
+IBAN: FI84 3131 3001 8081 61
+Viesti: Stimulaatio 2017, "Oma Nimi"
+Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 15 €
+Eräpäivä: 19.11.2017
+
+Allekirjoittanut vastaa mielellään juhliin liittyviin kysymyksiin.
+
+--
+Ystävällisin terveisin,
+
+Paul laihonen
+Stimulantti
+stimulantti@as.fi

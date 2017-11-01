@@ -10,85 +10,120 @@ from registration.serializers import RegistrationSerializer
 from registration.serializers import RegistrationSerializer2
 
 class RegistrationList(APIView):
-    def get(self, request, format=None):
-        permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
-        registrations = Registration.objects.all()
+    def get(self, request, format=None):
+
+        registrations = Registration.objects.all().order_by('id')
         serializer = RegistrationSerializer2(registrations, many=True)
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        permission_classes = (IsAuthenticated,)
-
         serializer = RegistrationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            email_address = request.data["email"]
-            self.send_verfication(email_address)
+
+            self.generate_verification_email(serializer.data)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
-            print(serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def send_verfication(self, email_address):
+    def generate_verification_email(self, registration_data):
+
+        # Hard coded email title
         title = "Tervetuloa Stimulaatioon 1.12.2017"
-        body = """Tervetuloa Stimulaatioon,
 
-Tämä on vahvistus ilmoittautumisestasi Automaatio- ja systeemitekniikan killan vuosijuhlaan Stimulaatioon. Tässä sähköpostissa vielä muutama käytännön ohje juhlaan liittyen.
+        with open('email.txt', 'r') as email_file:
+            confirmation_email = email_file.read()
 
-Juhlat pidetään 1. joulukuuta ja ne alkavat kello 16:00 cocktailtilaisuudella TUAS-talolla osoitteessa Maarintie 8, 02150 Espoo. Mikäli olet ilmoittaunut antamaan tervehdyksen muista olla paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Kauniaisten VPK-talolle (Asematie 20, 02700 Kauniainen), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa wanhat tanssit sekä vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
+        # Nimi
+        confirmation_email = confirmation_email.replace("${name}", registration_data["first_name"] + " " + registration_data["last_name"])
 
-Silliaamiainen Stillis käynnistää seuraavan päivän Otaniemen Rantasaunalla (Vastaranta 1, 02150 Espoo) ja paikalle voi saapua kello 12:00 alkaen.
+        # Sähköposti
+        confirmation_email = confirmation_email.replace("${email}", registration_data["email"])
 
-Juhlan maksutiedot ovat seuraavat:
+        # Lipputyyppi
+        if registration_data["ticket_type"] == "student":
+            confirmation_email = confirmation_email.replace("${ticket_type}", "Opiskelija")
+        elif registration_data["ticket_type"] == "full":
+            confirmation_email = confirmation_email.replace("${ticket_type}", "Valmistunut")
+        else:
+            confirmation_email = confirmation_email.replace("${ticket_type}", "Tarjottu")
 
-Saaja: Automaatio- ja systeemitekniikan kilta ry
-IBAN: FI84 3131 3001 8081 61
-Viesti: Stimulaatio 2017, "Oma Nimi"
-Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 15 €
-Eräpäivä: 19.11.2017
+        # Sillis
+        if registration_data["sillis"]:
+            confirmation_email = confirmation_email.replace("${sillis}", "Kyllä")
+        else:
+            confirmation_email = confirmation_email.replace("${sillis}", "Ei")
 
-Allekirjoittanut vastaa mielellään juhliin liittyviin kysymyksiin.
+        # Pöytäseura
+        confirmation_email = confirmation_email.replace("${table_company}", registration_data["table_company"])
 
---
-Ystävällisin terveisin,
+        # Avec
+        confirmation_email = confirmation_email.replace("${avec}", registration_data["avec"])
 
-Paul laihonen
-Stimulantti
-stimulantti@as.fi
-"""
-        verification_email = EmailMessage(title, body, to=[email_address])
+        # Erikoisruokavalio
+        confirmation_email = confirmation_email.replace("${special_diet}", registration_data["special_diet"])
+
+        # Menu
+        if registration_data["menu_type"] == "with alcohol":
+            confirmation_email = confirmation_email.replace("${menu_type}", "Alkoholillinen")
+        else:
+            confirmation_email = confirmation_email.replace("${menu_type}", "Alkoholiton")
+
+        # Kutsuvieras
+        if registration_data["is_invited"]:
+            confirmation_email = confirmation_email.replace("${is_invited}", "Kyllä")
+        else:
+            confirmation_email = confirmation_email.replace("${is_invited}", "Ei")
+
+        # Tervehdys
+        if registration_data["greeting"]:
+            confirmation_email = confirmation_email.replace("${greeting}", "Kyllä")
+        else:
+            confirmation_email = confirmation_email.replace("${greeting}", "Ei")
+
+        # Edustettu taho
+        if registration_data["is_invited"] or registration_data["greeting"]:
+            confirmation_email = confirmation_email.replace("${greeting_group}", "Edustettu taho: " + registration_data["greeting_group"] + "\n")
+        else:
+            confirmation_email = confirmation_email.replace("${greeting_group}", "")
+
+        # Phuksivuosi
+        confirmation_email = confirmation_email.replace("${freshman_year}", registration_data["freshman_year"])
+
+        self.send_verfication(registration_data["email"], title, confirmation_email)
+
+
+    def send_verfication(self, email_address, title, message):
+        verification_email = EmailMessage(title, message, to=[email_address])
         verification_email.send()
 
 
 class RegistrationListAll(APIView):
-    def get(self, request, format=None):
-        permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
+    def get(self, request, format=None):
         registrations = Registration.objects.all()
         serializer = RegistrationSerializer(registrations, many=True)
         return Response(serializer.data)
 
 
 class RegistrationDetail(APIView):
-    def get_object(selk, pk):
-        permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
+    def get_object(selk, pk):
         try:
             registration = Registration.objects.get(pk=pk)
         except Registration.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
     def get(self, request, pk, format=None):
-        permission_classes = (IsAuthenticated,)
-
         registration = self.get_object(pk)
         serializer = RegistrationSerializer(registration)
         return Response(serializer.data)
 
     def put(self, request, pk, format=None):
-        permission_classes = (IsAuthenticated,)
-
         registration = self.get_object(pk)
         serializer = RegistrationSerializer(registration, data=request.data)
         if serializer.is_valid():
@@ -98,8 +133,6 @@ class RegistrationDetail(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, ok, format=None):
-        permission_classes = (IsAuthenticated,)
-
         registration = self.get_object(pk)
         registration.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

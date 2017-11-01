@@ -14,6 +14,7 @@ class Registration(models.Model):
     menu_type = models.CharField(max_length=100)
     greeting = models.BooleanField()
     freshman_year = models.CharField(max_length=4, blank=True, default="")
+    greeting_group = models.CharField(max_length=100, blank=True, default="")
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
