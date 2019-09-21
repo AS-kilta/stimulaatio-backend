@@ -47,8 +47,6 @@ class RegistrationList(APIView):
             confirmation_email = confirmation_email.replace("${ticket_type}", "Opiskelija")
         elif registration_data["ticket_type"] == "full":
             confirmation_email = confirmation_email.replace("${ticket_type}", "Valmistunut")
-        else:
-            confirmation_email = confirmation_email.replace("${ticket_type}", "Tarjottu")
 
         # Sillis
         if registration_data["sillis"]:
