@@ -1,4 +1,4 @@
-Tämä on vahvistus ilmoittautumisestasi Automaatio- ja systeemitekniikan killan vuosijuhlaan Stimulaatioon. Tarkista, että täytetyt tiedot ovat oikein. Jos huomaat virheitä tai jotain muutoksia ilmenee, ilmoitathan näistä Stimulantille.
+Tämä on vahvistus ilmoittautumisestasi Stimulaatioon, Automaatio- ja systeemitekniikan killan 21. vuosijuhlaan. Jos huomaat täytetyissä tiedoissa virheitä, tai tietoihisi tulee muutoksia, ilmoitathan näistä Stimulanteille.
 
 Nimi: ${name}
 Sähköposti: ${email}
@@ -12,27 +12,27 @@ Kutsuvieras: ${is_invited}
 Tervehdys: ${greeting}
 ${greeting_group}Phuksivuosi: ${freshman_year}
 
-Tässä vielä muutama käytännön ohje juhlaan liittyen:
+Tässä vielä käytännön ohjeita juhlaan:
 
-Juhlat pidetään 1. joulukuuta ja ne alkavat kello 16:00 cocktailtilaisuudella TUAS-talolla osoitteessa Maarintie 8, 02150 Espoo. Mikäli olet ilmoittaunut antamaan tervehdyksen muista olla paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Kauniaisten VPK-talolle (Asematie 20, 02700 Kauniainen), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
+Vuosijuhlat pidetään perjantaina 15.11. alkaen kello 16:00 cocktailtilaisuudella TUAS-talolla (Maarintie 8, 02150 Espoo). Mikäli olet ilmoittaunut antamaan tervehdyksen, muista olla paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Ravintola Keilaniemeen (Keilaranta 5, 02150 Espoo), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
 
-Silliaamiainen Stillis käynnistää seuraavan päivän Otaniemen Rantasaunalla (Vastaranta 1, 02150 Espoo) ja paikalle voi saapua kello 12:00 alkaen.
+Silliaamiainen Stillis on seuraavana päivänä Rantasaunalla Otaniemessä (Vastaranta 1, 02150 Espoo) ja paikalle voi saapua kello 12:00 alkaen.
 
-Mikäli tarvitset majapaikkaa juhlan ajaksi, ota yhteyttä killan kulttuurimestari Antti Mellaan sähköpostitse kulttuurimestari@as.fi mitä pikimmiten. Olemme varanneet Otaniemen vierasmajat juhlavieraiden käyttöön.
+Mikäli tarvitset majapaikkaa juhlan ajaksi, ota yhteyttä Stimulantteihin mahdollisimman pian.
 
 Juhlan maksutiedot ovat seuraavat:
 
 Saaja: Automaatio- ja systeemitekniikan kilta ry
 IBAN: FI84 3131 3001 8081 61
-Viesti: Stimulaatio 2017, "Oma Nimi"
-Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 15 €
-Eräpäivä: 19.11.2017
+Viite: 25881  
+Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 20 €
+Eräpäivä: 15.10.2019
 
-Allekirjoittanut vastaa mielellään juhliin liittyviin kysymyksiin.
+Allekirjoittaneet vastaavat mielellään juhliin liittyviin kysymyksiin.
 
 --
 Ystävällisin terveisin,
 
-Paul laihonen
-Stimulantti
+Stimulantit
+Sanna Halmkrona & Noora Salminen
 stimulantti@as.fi
