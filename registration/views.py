@@ -31,7 +31,7 @@ class RegistrationList(APIView):
     def generate_verification_email(self, registration_data):
 
         # Hard coded email title
-        title = "Tervetuloa Stimulaatioon 1.12.2017"
+        title = "Tervetuloa Stimulaatioon 15.11.2019"
 
         with open('email.txt', 'r') as email_file:
             confirmation_email = email_file.read()
