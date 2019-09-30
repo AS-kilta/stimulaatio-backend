@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'stimulantti@as.fi'
+EMAIL_HOST_USER = 'stimulaatio@as.fi'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_PORT = 587
 
