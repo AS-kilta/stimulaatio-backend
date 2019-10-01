@@ -110,9 +110,9 @@ class RegistrationListAll(APIView):
 class RegistrationDetail(APIView):
     permission_classes = (IsAuthenticated,)
 
-    def get_object(self, pk):
+    def get_object(self, object_id):
         try:
-            registration = Registration.objects.get(pk=pk)
+            registration = Registration.objects.get(pk=object_id)
         except Registration.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
