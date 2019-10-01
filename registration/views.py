@@ -110,7 +110,7 @@ class RegistrationListAll(APIView):
 class RegistrationDetail(APIView):
     permission_classes = (IsAuthenticated,)
 
-    def get_object(selk, pk):
+    def get_object(self, pk):
         try:
             registration = Registration.objects.get(pk=pk)
         except Registration.DoesNotExist:
