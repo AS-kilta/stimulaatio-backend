@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'stimulaatio.as.fi']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'stimulaatio.as.fi']
 
 
 # Application definition
