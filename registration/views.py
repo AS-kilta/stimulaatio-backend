@@ -142,3 +142,11 @@ class RegistrationDetail(APIView):
         registration = self.get_object(pk)
         registration.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class RegistrationCount(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, format=None):
+        count = Registration.objects.all().count()
+        return Response(count)
