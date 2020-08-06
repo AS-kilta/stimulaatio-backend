@@ -1,4 +1,4 @@
-Tämä on vahvistus ilmoittautumisestasi Stimulaatioon, Automaatio- ja systeemitekniikan killan 21. vuosijuhlaan. Jos huomaat täytetyissä tiedoissa virheitä, tai tietoihisi tulee muutoksia, ilmoitathan näistä Stimulanteille.
+Tämä on vahvistus ilmoittautumisestasi Stimulaatioon, Automaatio- ja systeemitekniikan killan 22. vuosijuhlaan. Jos huomaat täytetyissä tiedoissa virheitä, tai tietoihisi tulee muutoksia, ilmoitathan näistä Stimulantille.
 
 Nimi: ${name}
 Sähköposti: ${email}
@@ -11,28 +11,29 @@ Menu: ${menu_type}
 Kutsuvieras: ${is_invited}
 Tervehdys: ${greeting}
 ${greeting_group}Phuksivuosi: ${freshman_year}
+Tietojen julkisuus: ${show_name}
 
 Tässä vielä käytännön ohjeita juhlaan:
 
-Vuosijuhlat pidetään perjantaina 15.11. alkaen kello 16:00 cocktailtilaisuudella TUAS-talolla (Maarintie 8, 02150 Espoo). Mikäli olet ilmoittaunut antamaan tervehdyksen, muista olla paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Ravintola Keilaniemeen (Keilaranta 5, 02150 Espoo), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
+Vuosijuhlat pidetään perjantaina 13.11. alkaen kello 16:00 cocktailtilaisuudella TUAS-talolla (Maarintie 8, 02150 Espoo). Mikäli olet ilmoittaunut antamaan tervehdyksen, olethan paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Opinmäkeen (Lillhemtintie 1, 02250 Espoo), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
 
 Silliaamiainen Stillis on seuraavana päivänä Rantasaunalla Otaniemessä (Vastaranta 1, 02150 Espoo) ja paikalle voi saapua kello 12:00 alkaen.
 
-Mikäli tarvitset majapaikkaa juhlan ajaksi, ota yhteyttä Stimulantteihin mahdollisimman pian.
+Mikäli tarvitset majapaikkaa juhlan ajaksi, ota yhteyttä Stimulanttiin mahdollisimman pian.
 
 Juhlan maksutiedot ovat seuraavat:
 
 Saaja: Automaatio- ja systeemitekniikan kilta ry
 IBAN: FI84 3131 3001 8081 61
 Viite: 25881  
-Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 20 €
+Hinta: 70 € (opiskelija) tai 85 € (valmistunut), Stillis 25 €
 Eräpäivä: 15.10.2019
 
-Allekirjoittaneet vastaavat mielellään juhliin liittyviin kysymyksiin.
+Allekirjoittanut vastaa mielellään juhliin liittyviin kysymyksiin.
 
 --
 Ystävällisin terveisin,
 
-Stimulantit
-Sanna Halmkrona & Noora Salminen
+Stimulantti
+Mari Pulkkinen
 stimulantti@as.fi

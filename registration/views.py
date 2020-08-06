@@ -14,7 +14,7 @@ class RegistrationList(APIView):
 
     def get(self, request, format=None):
 
-        registrations = Registration.objects.all().order_by('id')
+        registrations = Registration.objects.all().filter(show_name=True).order_by('id')
         serializer = RegistrationSerializer2(registrations, many=True)
         return Response(serializer.data)
 
@@ -31,7 +31,7 @@ class RegistrationList(APIView):
     def generate_verification_email(self, registration_data):
 
         # Hard coded email title
-        title = "Tervetuloa Stimulaatioon 15.11.2019"
+        title = "Tervetuloa Stimulaatioon 13.11.2020"
 
         with open('email.txt', 'r') as email_file:
             confirmation_email = email_file.read()
@@ -43,7 +43,9 @@ class RegistrationList(APIView):
         confirmation_email = confirmation_email.replace("${email}", registration_data["email"])
 
         # Lipputyyppi
-        if registration_data["ticket_type"] == "student":
+        if registration_data["ticket_type"] == "free":
+            confirmation_email = confirmation_email.replace("${ticket_type}", "Tarjottu")
+        elif registration_data["ticket_type"] == "student":
             confirmation_email = confirmation_email.replace("${ticket_type}", "Opiskelija")
         elif registration_data["ticket_type"] == "full":
             confirmation_email = confirmation_email.replace("${ticket_type}", "Valmistunut")
@@ -91,6 +93,12 @@ class RegistrationList(APIView):
         confirmation_email = confirmation_email.replace("${freshman_year}", registration_data["freshman_year"])
 
         self.send_verfication(registration_data["email"], title, confirmation_email)
+
+        # Tietojen julkisuus
+        if registration_data["show_name"]:
+            confirmation_email = confirmation_email.replace("${show_name}", "Saa julkaista")
+        else:
+            confirmation_email = confirmation_email.replace("${show_name}", "Ei saa julkaista")
 
 
     def send_verfication(self, email_address, title, message):

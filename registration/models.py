@@ -15,6 +15,7 @@ class Registration(models.Model):
     greeting = models.BooleanField()
     freshman_year = models.CharField(max_length=4, blank=True, default="")
     greeting_group = models.CharField(max_length=100, blank=True, default="")
+    show_name = models.BooleanField()
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
