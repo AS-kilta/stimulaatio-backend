@@ -92,14 +92,13 @@ class RegistrationList(APIView):
         # Phuksivuosi
         confirmation_email = confirmation_email.replace("${freshman_year}", registration_data["freshman_year"])
 
-        self.send_verfication(registration_data["email"], title, confirmation_email)
-
         # Tietojen julkisuus
         if registration_data["show_name"]:
             confirmation_email = confirmation_email.replace("${show_name}", "Saa julkaista")
         else:
             confirmation_email = confirmation_email.replace("${show_name}", "Ei saa julkaista")
 
+        self.send_verfication(registration_data["email"], title, confirmation_email)
 
     def send_verfication(self, email_address, title, message):
         verification_email = EmailMessage(title, message, to=[email_address])
