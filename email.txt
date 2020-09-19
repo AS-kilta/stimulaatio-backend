@@ -3,7 +3,6 @@ Tämä on vahvistus ilmoittautumisestasi Stimulaatioon, Automaatio- ja systeemit
 Nimi: ${name}
 Sähköposti: ${email}
 Lipputyyppi: ${ticket_type}
-Sillis: ${sillis}
 Pöytäseura: ${table_company}
 Avec: ${avec}
 Erikoisruokavalio: ${special_diet}
@@ -26,7 +25,7 @@ Juhlan maksutiedot ovat seuraavat:
 Saaja: Automaatio- ja systeemitekniikan kilta ry
 IBAN: FI84 3131 3001 8081 61
 Viite: 202099
-Hinta: 70 € (opiskelija) tai 85 € (valmistunut), Stillis 25 €
+Hinta: 70 € (opiskelija) tai 85 € (valmistunut)
 Eräpäivä: 13.10.2020
 
 Allekirjoittanut vastaa mielellään juhliin liittyviin kysymyksiin.

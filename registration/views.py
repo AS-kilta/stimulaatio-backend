@@ -51,10 +51,11 @@ class RegistrationList(APIView):
             confirmation_email = confirmation_email.replace("${ticket_type}", "Valmistunut")
 
         # Sillis
-        if registration_data["sillis"]:
-            confirmation_email = confirmation_email.replace("${sillis}", "Kyllä")
-        else:
-            confirmation_email = confirmation_email.replace("${sillis}", "Ei")
+        # if registration_data["sillis"]:
+        #     confirmation_email = confirmation_email.replace("${sillis}", "Kyllä")
+        # else:
+        #     confirmation_email = confirmation_email.replace("${sillis}", "Ei")
+        # email.txt tiedostoon tulee lisätä kohta sillikselle, jos tämän haluaa mukaan 
 
         # Pöytäseura
         confirmation_email = confirmation_email.replace("${table_company}", registration_data["table_company"])
