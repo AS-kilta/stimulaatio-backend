@@ -12,13 +12,9 @@ Tervehdys: ${greeting}
 ${greeting_group}Phuksivuosi: ${freshman_year}
 Tietojen julkisuus: ${show_name}
 
-Tässä vielä käytännön ohjeita juhlaan:
+Vuosijuhlat pidetään perjantaina 13.11. alkaen kello 17.30 cocktailtilaisuudella pääjuhlapaikalla Opinmäessä (Lillhemtintie 1, 02250 Espoo), jonne on kuljetukset Otaniemestä. Mikäli olet ilmoittautunut antamaan tervehdyksen, olethan paikalla ajoissa. Varsinainen pöytäjuhla alkaa kello 19.00.
 
-Vuosijuhlat pidetään perjantaina 13.11. alkaen kello 16:00 cocktailtilaisuudella TUAS-talolla (Maarintie 8, 02150 Espoo). Mikäli olet ilmoittaunut antamaan tervehdyksen, olethan paikalla ajoissa. TUAS-talolta on kuljetukset pääjuhlapaikalle Opinmäkeen (Lillhemtintie 1, 02250 Espoo), jossa pöytäjuhla alkaa kello 19:00. Pöytäosuuden jälkeen seuraa vapaammat jatkot, jonne on kuljetukset pääjuhlapaikalta.
-
-Silliaamiainen Stillis on seuraavana päivänä Rantasaunalla Otaniemessä (Vastaranta 1, 02150 Espoo) ja paikalle voi saapua kello 12:00 alkaen.
-
-Mikäli tarvitset majapaikkaa juhlan ajaksi, ota yhteyttä Stimulanttiin mahdollisimman pian.
+Mahdollisista jatkoista ja silliaamiaisesta, Stilliksestä tiedotetaan lähempänä tapahtumaa. Lähempänä juhlaa lähetetään myös tarkempaa ohjeistusta juhlaan liittyen.
 
 Juhlan maksutiedot ovat seuraavat:
 
@@ -26,7 +22,7 @@ Saaja: Automaatio- ja systeemitekniikan kilta ry
 IBAN: FI84 3131 3001 8081 61
 Viite: 202099
 Hinta: 70 € (opiskelija) tai 85 € (valmistunut)
-Eräpäivä: 13.10.2020
+Eräpäivä: 20.10.2020
 
 Allekirjoittanut vastaa mielellään juhliin liittyviin kysymyksiin.
 
